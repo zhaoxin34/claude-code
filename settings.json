@@ -17,9 +17,14 @@
       "Bash(cp:*)",
       "Edit",
       "Bash(chmod:*)",
-      "Bash(touch:*)"
+      "Bash(touch:*)",
+      "Bash(curl:*)",
+      "Skill(web-fetcher)"
     ],
-    "deny": []
+    "deny": [
+      "WebFetch",
+      "WebSearch"
+    ]
   },
   "hooks": {
     "UserPromptSubmit": [
