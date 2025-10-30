@@ -27,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run ./hooks/user_prompt_submit.py"
+            "command": "uv run $HOME/.claude/hooks/user_prompt_submit.py"
           }
         ]
       }
@@ -38,7 +38,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run ./hooks/notification.py"
+            "command": "uv run $HOME/.claude/hooks/notification.py"
           }
         ]
       }
@@ -49,7 +49,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run ./hooks/stop.py"
+            "command": "uv run $HOME/.claude/hooks/stop.py"
           }
         ]
       }
@@ -60,7 +60,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "uv run ./hooks/subagent_stop.py"
+            "command": "uv run $HOME/.claude/hooks/subagent_stop.py"
           }
         ]
       }
