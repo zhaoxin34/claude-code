@@ -19,13 +19,14 @@
       "Bash(chmod:*)",
       "Bash(touch:*)",
       "Bash(curl:*)",
+      "Bash(git:*)",
       "Skill(web-fetcher)"
     ],
     "deny": [
-      "WebFetch",
-      "WebSearch"
+      "WebFetch"
     ]
   },
+  "model": "haiku",
   "hooks": {
     "UserPromptSubmit": [
       {
