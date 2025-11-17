@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "questdb": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://admin:quest@localhost:8812/qdb"
+      ]
+    }
+  }
+}
