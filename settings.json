@@ -77,7 +77,6 @@
     "document-skills@anthropic-agent-skills": true,
     "example-skills@anthropic-agent-skills": true
   },
-  "alwaysThinkingEnabled": false,
   "hooks2": {
     "PreToolUse": [
       {
