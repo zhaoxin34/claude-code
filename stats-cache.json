@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastComputedDate": "2025-12-22",
+  "lastComputedDate": "2026-01-07",
   "dailyActivity": [
     {
       "date": "2025-10-23",
@@ -73,6 +73,36 @@
       "messageCount": 15,
       "sessionCount": 1,
       "toolCallCount": 3
+    },
+    {
+      "date": "2025-12-23",
+      "messageCount": 91,
+      "sessionCount": 3,
+      "toolCallCount": 36
+    },
+    {
+      "date": "2025-12-25",
+      "messageCount": 5,
+      "sessionCount": 2,
+      "toolCallCount": 0
+    },
+    {
+      "date": "2025-12-29",
+      "messageCount": 12,
+      "sessionCount": 1,
+      "toolCallCount": 3
+    },
+    {
+      "date": "2025-12-31",
+      "messageCount": 476,
+      "sessionCount": 3,
+      "toolCallCount": 179
+    },
+    {
+      "date": "2026-01-07",
+      "messageCount": 119,
+      "sessionCount": 2,
+      "toolCallCount": 44
     }
   ],
   "dailyModelTokens": [
@@ -148,13 +178,43 @@
       "tokensByModel": {
         "glm-4.5-air": 60274
       }
+    },
+    {
+      "date": "2025-12-23",
+      "tokensByModel": {
+        "glm-4.5-air": 192005
+      }
+    },
+    {
+      "date": "2025-12-25",
+      "tokensByModel": {
+        "glm-4.5-air": 28497
+      }
+    },
+    {
+      "date": "2025-12-29",
+      "tokensByModel": {
+        "glm-4.5-air": 22411
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "tokensByModel": {
+        "glm-4.5-air": 2997268
+      }
+    },
+    {
+      "date": "2026-01-07",
+      "tokensByModel": {
+        "glm-4.5-air": 266384
+      }
     }
   ],
   "modelUsage": {
     "glm-4.5-air": {
-      "inputTokens": 4931473,
-      "outputTokens": 66429,
-      "cacheReadInputTokens": 7394712,
+      "inputTokens": 8287914,
+      "outputTokens": 216553,
+      "cacheReadInputTokens": 31650127,
       "cacheCreationInputTokens": 0,
       "webSearchRequests": 0,
       "costUSD": 0,
@@ -170,8 +230,8 @@
       "contextWindow": 0
     }
   },
-  "totalSessions": 26,
-  "totalMessages": 601,
+  "totalSessions": 37,
+  "totalMessages": 1304,
   "longestSession": {
     "sessionId": "e3f5168c-aca6-4168-b85b-c8ec62c04791",
     "duration": 2248268187,
@@ -182,11 +242,12 @@
   "hourCounts": {
     "9": 3,
     "10": 6,
-    "11": 6,
+    "11": 11,
     "12": 1,
-    "14": 2,
-    "15": 6,
+    "14": 3,
+    "15": 8,
     "16": 1,
-    "18": 1
+    "17": 1,
+    "18": 3
   }
 }
