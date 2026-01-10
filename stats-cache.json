@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "lastComputedDate": "2026-01-09",
+  "dailyActivity": [
+    {
+      "date": "2025-12-07",
+      "messageCount": 16,
+      "sessionCount": 1,
+      "toolCallCount": 6
+    },
+    {
+      "date": "2025-12-22",
+      "messageCount": 130,
+      "sessionCount": 1,
+      "toolCallCount": 56
+    }
+  ],
+  "dailyModelTokens": [
+    {
+      "date": "2025-12-07",
+      "tokensByModel": {
+        "glm-4.5-air": 55938
+      }
+    },
+    {
+      "date": "2025-12-22",
+      "tokensByModel": {
+        "glm-4.5-air": 349676
+      }
+    }
+  ],
+  "modelUsage": {
+    "glm-4.5-air": {
+      "inputTokens": 383446,
+      "outputTokens": 22168,
+      "cacheReadInputTokens": 2799222,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0
+    }
+  },
+  "totalSessions": 2,
+  "totalMessages": 146,
+  "longestSession": {
+    "sessionId": "792a467e-95c5-4dd6-a411-1107ace2aa0e",
+    "duration": 2215137,
+    "messageCount": 130,
+    "timestamp": "2025-12-22T12:28:57.929Z"
+  },
+  "firstSessionDate": "2025-12-07T06:45:01.029Z",
+  "hourCounts": {
+    "14": 1,
+    "20": 1
+  }
+}
