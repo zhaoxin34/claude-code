@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastComputedDate": "2026-01-08",
+  "lastComputedDate": "2026-01-12",
   "dailyActivity": [
     {
       "date": "2025-10-23",
@@ -109,6 +109,18 @@
       "messageCount": 287,
       "sessionCount": 4,
       "toolCallCount": 85
+    },
+    {
+      "date": "2026-01-09",
+      "messageCount": 86,
+      "sessionCount": 2,
+      "toolCallCount": 28
+    },
+    {
+      "date": "2026-01-12",
+      "messageCount": 61,
+      "sessionCount": 2,
+      "toolCallCount": 10
     }
   ],
   "dailyModelTokens": [
@@ -220,17 +232,30 @@
       "tokensByModel": {
         "glm-4.5-air": 1503099
       }
+    },
+    {
+      "date": "2026-01-09",
+      "tokensByModel": {
+        "glm-4.5-air": 207408
+      }
+    },
+    {
+      "date": "2026-01-12",
+      "tokensByModel": {
+        "claude-sonnet-4-5-20250929": 25603
+      }
     }
   ],
   "modelUsage": {
     "glm-4.5-air": {
-      "inputTokens": 9736121,
-      "outputTokens": 271445,
-      "cacheReadInputTokens": 37953132,
+      "inputTokens": 9934381,
+      "outputTokens": 280593,
+      "cacheReadInputTokens": 39060716,
       "cacheCreationInputTokens": 0,
       "webSearchRequests": 0,
       "costUSD": 0,
-      "contextWindow": 0
+      "contextWindow": 0,
+      "maxOutputTokens": null
     },
     "glm-4.6": {
       "inputTokens": 20256,
@@ -240,10 +265,20 @@
       "webSearchRequests": 0,
       "costUSD": 0,
       "contextWindow": 0
+    },
+    "claude-sonnet-4-5-20250929": {
+      "inputTokens": 20001,
+      "outputTokens": 5602,
+      "cacheReadInputTokens": 772744,
+      "cacheCreationInputTokens": 47882,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
     }
   },
-  "totalSessions": 41,
-  "totalMessages": 1591,
+  "totalSessions": 45,
+  "totalMessages": 1738,
   "longestSession": {
     "sessionId": "e3f5168c-aca6-4168-b85b-c8ec62c04791",
     "duration": 2248268187,
@@ -254,12 +289,12 @@
   "hourCounts": {
     "9": 4,
     "10": 6,
-    "11": 13,
+    "11": 14,
     "12": 1,
     "14": 3,
     "15": 8,
     "16": 2,
-    "17": 1,
-    "18": 3
+    "17": 2,
+    "18": 5
   }
 }
