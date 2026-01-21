@@ -77,7 +77,8 @@
   "enabledPlugins": {
     "document-skills@anthropic-agent-skills": true,
     "example-skills@anthropic-agent-skills": true,
-    "pyright-lsp@claude-plugins-official": true
+    "pyright-lsp@claude-plugins-official": true,
+    "claude-mem@thedotmack": true
   },
   "hooks2": {
     "PreToolUse": [
