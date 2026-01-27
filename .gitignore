@@ -112,3 +112,8 @@ projects/
 ide/
 session-env/
 plugins/
+
+paste-cache/
+telemetry/
+cache/
+stats-cache.json
