@@ -1,0 +1,43 @@
+INFO - app.llm.providers.openai - 开始调用 OpenAI API: model=qwen3-max, messages_count=2, user_content_length=356, stream=True
+DEBUG - app.llm.providers.openai - System prompt: 你是一名资深的运营策划专家，擅长根据需求修改运营策划文档。...
+DEBUG - app.llm.providers.openai - User prompt: 你是一名资深的运营策划专家。
+
+下面是当前的运营策划文档（Markdown 格式）：
+--------------------
+# 运营策划文档
+
+这是第一版内容v10
+
+## 新增内容
+
+hello
+--------------------
+
+用户提出了新的修改要求：
+--------------------
+hello
+--------------------
+
+请你根据用户的要求，对上述运营...
+DEBUG - app.llm.providers.openai - 使用流式模式调用 API
+INFO - httpx - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG - app.llm.providers.openai - 收到流式块: #...
+DEBUG - app.llm.providers.openai - 收到流式块:  运营...
+DEBUG - app.llm.providers.openai - 收到流式块: 策划文档
+
+...
+DEBUG - app.llm.providers.openai - 收到流式块: 这是第一版...
+DEBUG - app.llm.providers.openai - 收到流式块: 内容v10
+
+##...
+DEBUG - app.llm.providers.openai - 收到流式块:  新增内容
+
+hello...
+INFO - app.llm.providers.openai - OpenAI API 流式调用完成: finish_reason=stop, response_length=36, chunks_count=6
+DEBUG - app.llm.providers.openai - Response content: # 运营策划文档
+
+这是第一版内容v10
+
+## 新增内容
+
+hello...
