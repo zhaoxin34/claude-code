@@ -23,6 +23,7 @@
       "WebFetch"
     ]
   },
+  "model": "haiku",
   "hooks": {
     "UserPromptSubmit": [
       {
