@@ -17,7 +17,6 @@
       "Bash(touch:*)",
       "Bash(curl:*)",
       "Bash(git:*)",
-      "Skill(web-fetcher)",
       "Create",
       "Update",
       "Bash(npx:*)",
@@ -35,7 +34,6 @@
       "Bash(supabase:*)"
     ],
     "deny": [
-      "WebFetch",
       "Bash(rm -rf:*)"
     ]
   },
@@ -91,16 +89,11 @@
     "padding": 0
   },
   "enabledPlugins": {
-    "document-skills@anthropic-agent-skills": true,
-    "example-skills@anthropic-agent-skills": true,
     "pyright-lsp@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
     "claude-mem@thedotmack": true,
-    "claude-code-setup@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "claude-reflect@claude-reflect-marketplace": true
+    "typescript-lsp@claude-plugins-official": true
   },
   "hooks2": {
     "PreToolUse": [
