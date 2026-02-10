@@ -76,7 +76,7 @@
   },
   "enabledPlugins": {
     "document-skills@anthropic-agent-skills": true,
-    "example-skills@anthropic-agent-skills": true,
+    "example-skills@anthropic-agent-skills": false,
     "pyright-lsp@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
     "claude-mem@thedotmack": true,
@@ -84,7 +84,8 @@
     "claude-md-management@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "claude-reflect@claude-reflect-marketplace": true
+    "claude-reflect@claude-reflect-marketplace": true,
+    "ast-grep@ast-grep-marketplace": true
   },
   "hooks2": {
     "PreToolUse": [
