@@ -19,20 +19,12 @@
       "Bash(curl:*)",
       "Bash(git:*)",
       "Create",
-      "Update",
       "Bash(npx:*)",
-      "Bash(git checkout:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push origin feature:*)",
-      "Bash(git push origin fix:*)",
-      "Bash(git branch:*)",
-      "Bash(git status:*)",
-      "Bash(git pull:*)",
-      "Bash(git diff:*)",
-      "Bash(gh pr create:*)",
-      "Bash(gh pr status:*)",
-      "Bash(supabase:*)"
+      "Bash(gh pr:*)",
+      "Bash(supabase:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "mcp__mcp-server-starrocks__*"
     ],
     "deny": [
       "Bash(rm -rf:*)"
@@ -97,7 +89,7 @@
     "claude-mem@thedotmack": true,
     "commit-commands@claude-plugins-official": true,
     "claude-reflect@claude-reflect-marketplace": false,
-    "ast-grep@ast-grep-marketplace": false,
+    "ast-grep@ast-grep-marketplace": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "hooks2": {

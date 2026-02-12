@@ -97,8 +97,24 @@ Options:
 ## 打开新终端
 
 ```bash
-wezterm cli spawn -- zsh
+pane_id=$(wezterm cli spawn -- zsh)
 ```
+
+## 向pane发送命令
+
+```bash
+echo -n "some command\n" | wezterm cli send-text --pane-id=$pane_id --no-paste
+
+```
+
+## 获取pane的输出
+
+```bash
+wezterm cli get-text --pane-id=$pane_id --start-line=-200
+```
+
+值得注意的是--start-line这个参数可以根据实际情况设置大小，但不要超过1000行；另外，因为send-text是异步的，所以get-text未必能获得所有信息，也许命令正在执行，这时，可以sleep几秒再get-text
+
 
 ## 规范
 
