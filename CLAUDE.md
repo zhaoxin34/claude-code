@@ -6,3 +6,4 @@
 * 如果使用数据库，优先考虑sqlite，其次考虑mysql
 * 如果要使用临时目录，使用/tmp/claude/作为临时目录
 * 如果可以，尽量生成MakeFile
+- 如果需要在markdown里绘图，优先使用mermaid
