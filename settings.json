@@ -89,7 +89,7 @@
     "claude-mem@thedotmack": true,
     "commit-commands@claude-plugins-official": true,
     "claude-reflect@claude-reflect-marketplace": false,
-    "ast-grep@ast-grep-marketplace": false,
+    "ast-grep@ast-grep-marketplace": true,
     "typescript-lsp@claude-plugins-official": true
   },
   "hooks2": {
