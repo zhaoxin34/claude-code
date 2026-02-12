@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "Skill(wezterm-cli)"
+      "Skill(wezterm-cli)",
+      "mcp__mcp-ali-web-search__bailian_web_search"
     ]
   },
   "enableAllProjectMcpServers": true,
