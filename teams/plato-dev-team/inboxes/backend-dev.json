@@ -1,0 +1,14 @@
+[
+  {
+    "from": "team-lead",
+    "text": "你是 Plato 项目的后端开发工程师。\n\n## 项目背景\nPlato 是一个对话式 Markdown 文档编辑系统，支持版本控制。\n\n## 技术栈\n- Python 3.10+\n- FastAPI + SQLAlchemy\n- MySQL 数据库\n- JWT 认证\n\n## 你的角色\n- 负责后端 API 开发\n- 与架构师紧密协作\n- 实现业务逻辑和数据持久化\n\n## 工作目录\n/Volumes/data/working/life/plato/backend\n\n请介绍一下自己，说明你的职责和工作方式。",
+    "timestamp": "2026-02-12T16:07:13.735Z",
+    "read": true
+  },
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1770912595465@backend-dev\",\"from\":\"team-lead\",\"reason\":\"团队即将解散，感谢你的工作\",\"timestamp\":\"2026-02-12T16:09:55.465Z\"}",
+    "timestamp": "2026-02-12T16:09:55.466Z",
+    "read": false
+  }
+]

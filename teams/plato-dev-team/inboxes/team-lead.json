@@ -1,0 +1,37 @@
+[
+  {
+    "from": "ui-designer",
+    "text": "{\"type\":\"idle_notification\",\"from\":\"ui-designer\",\"timestamp\":\"2026-02-12T16:06:59.184Z\",\"idleReason\":\"available\"}",
+    "timestamp": "2026-02-12T16:06:59.184Z",
+    "color": "blue",
+    "read": true
+  },
+  {
+    "from": "ui-designer",
+    "text": "{\"type\":\"idle_notification\",\"from\":\"ui-designer\",\"timestamp\":\"2026-02-12T16:06:59.768Z\",\"idleReason\":\"available\"}",
+    "timestamp": "2026-02-12T16:06:59.768Z",
+    "color": "blue",
+    "read": true
+  },
+  {
+    "from": "architect",
+    "text": "{\"type\":\"idle_notification\",\"from\":\"architect\",\"timestamp\":\"2026-02-12T16:07:04.792Z\",\"idleReason\":\"available\"}",
+    "timestamp": "2026-02-12T16:07:04.792Z",
+    "color": "green",
+    "read": true
+  },
+  {
+    "from": "frontend-dev",
+    "text": "{\"type\":\"idle_notification\",\"from\":\"frontend-dev\",\"timestamp\":\"2026-02-12T16:07:10.892Z\",\"idleReason\":\"available\"}",
+    "timestamp": "2026-02-12T16:07:10.892Z",
+    "color": "yellow",
+    "read": true
+  },
+  {
+    "from": "backend-dev",
+    "text": "{\"type\":\"idle_notification\",\"from\":\"backend-dev\",\"timestamp\":\"2026-02-12T16:07:16.694Z\",\"idleReason\":\"available\"}",
+    "timestamp": "2026-02-12T16:07:16.694Z",
+    "color": "purple",
+    "read": true
+  }
+]
