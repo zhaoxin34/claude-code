@@ -50,6 +50,10 @@
           {
             "type": "command",
             "command": "uv run $HOME/.claude/hooks/notification.py"
+          },
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\"'"
           }
         ]
       }
