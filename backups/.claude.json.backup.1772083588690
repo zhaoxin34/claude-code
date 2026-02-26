@@ -1,5 +1,5 @@
 {
-  "numStartups": 204,
+  "numStartups": 205,
   "installMethod": "native",
   "autoUpdates": false,
   "hasSeenTasksHint": true,
@@ -945,7 +945,7 @@
   },
   "clientDataCache": {
     "data": null,
-    "timestamp": 1772033787721
+    "timestamp": 1772037838950
   },
   "showSpinnerTree": false,
   "sonnet1m45MigrationComplete": true,
