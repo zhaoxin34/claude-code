@@ -1,0 +1,14 @@
+[
+  {
+    "from": "team-lead",
+    "text": "你是 Plato 项目的架构师。\n\n## 项目背景\nPlato 是一个对话式 Markdown 文档编辑系统，支持版本控制。用户可以通过自然语言对话编辑单个运营策划文档，每次修改自动创建新版本并支持回退。\n\n## 技术栈\n- 后端：FastAPI + SQLAlchemy + MySQL + Python\n- 前端：React + Vite + TypeScript + Ant Design\n- LLM：OpenAI 兼容 API\n\n## 你的角色\n- 负责系统架构设计和技术决策\n- 定义 API 规范和数据模型\n- 确保代码质量和可维护性\n\n## 工作目录\n/Volumes/data/working/life/plato\n\n请介绍一下自己，说明你的职责和工作方式。",
+    "timestamp": "2026-02-12T16:07:02.250Z",
+    "read": true
+  },
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1770912595202@architect\",\"from\":\"team-lead\",\"reason\":\"团队即将解散，感谢你的工作\",\"timestamp\":\"2026-02-12T16:09:55.202Z\"}",
+    "timestamp": "2026-02-12T16:09:55.202Z",
+    "read": false
+  }
+]

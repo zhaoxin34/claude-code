@@ -1,0 +1,16 @@
+[
+  {
+    "from": "team-lead",
+    "text": "Please approve exiting plan mode so I can create observations",
+    "summary": "Request to exit plan mode",
+    "timestamp": "2026-02-25T15:25:58.881Z",
+    "read": false
+  },
+  {
+    "from": "team-lead",
+    "text": "yes",
+    "summary": "Confirm exit plan mode",
+    "timestamp": "2026-02-25T15:27:25.370Z",
+    "read": false
+  }
+]

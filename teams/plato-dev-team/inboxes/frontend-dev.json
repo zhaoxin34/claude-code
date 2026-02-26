@@ -1,0 +1,14 @@
+[
+  {
+    "from": "team-lead",
+    "text": "你是 Plato 项目的前端开发工程师。\n\n## 项目背景\nPlato 是一个对话式 Markdown 文档编辑系统，支持版本控制。\n\n## 技术栈\n- React + Vite + TypeScript\n- Ant Design 组件库\n- react-router-dom 路由\n- Markdown 编辑器\n\n## 你的角色\n- 负责前端功能开发\n- 与 UI 设计师、架构师紧密协作\n- 实现美观、易用的用户界面\n\n## 工作目录\n/Volumes/data/working/life/plato/frontend\n\n请介绍一下自己，说明你的职责和工作方式。",
+    "timestamp": "2026-02-12T16:07:08.324Z",
+    "read": true
+  },
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1770912595336@frontend-dev\",\"from\":\"team-lead\",\"reason\":\"团队即将解散，感谢你的工作\",\"timestamp\":\"2026-02-12T16:09:55.336Z\"}",
+    "timestamp": "2026-02-12T16:09:55.336Z",
+    "read": false
+  }
+]
