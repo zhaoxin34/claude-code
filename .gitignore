@@ -103,3 +103,4 @@ telemetry/
 cache/
 stats-cache.json
 tasks/
+backups/
