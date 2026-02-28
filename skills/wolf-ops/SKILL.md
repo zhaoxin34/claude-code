@@ -15,6 +15,10 @@ Wolf是我公司开发的营销系统简介，他所采用的技术架构主要�
 - Hadoop
 - Spark
 
+# 原则
+
+- 每次执行命令必须打印执行的命令，以便后续审核
+
 ## Wolf系统部署的namespace简介
 
 namespace主要如下
@@ -29,4 +33,31 @@ namespace主要如下
 
 ```bash
 kubectl get pod -n dev-wolf
+```
+
+## 示例2：查询Pod使用的JDK版本
+
+```bash
+# 1. 先查询目标服务的Pod名称
+kubectl get pod -n dev-wolf | grep wolf-manager-v4
+
+# 2. 查看Pod的环境变量，获取JDK版本
+kubectl exec -it <pod-name> -n dev-wolf -- env | grep -i java
+
+```
+
+**常用查询命令**：
+
+```bash
+# 查看所有服务
+kubectl get svc -n dev-wolf
+
+# 查看特定服务的Pod
+kubectl get pod -n dev-wolf | grep <服务名>
+
+# 查看Pod详情（包括镜像、环境变量等）
+kubectl describe pod <pod-name> -n dev-wolf
+
+# 进入Pod内部执行命令
+kubectl exec -it <pod-name> -n dev-wolf -- /bin/bash
 ```

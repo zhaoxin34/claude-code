@@ -4,7 +4,11 @@
       "WebSearch",
       "Skill(wezterm-cli)",
       "mcp__mcp-ali-web-search__bailian_web_search",
-      "Skill(awesome-agent)"
+      "Skill(awesome-agent)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl exec:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
