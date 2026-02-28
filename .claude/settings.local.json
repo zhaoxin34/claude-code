@@ -8,7 +8,9 @@
       "WebFetch(domain:docs.anthropic.com)",
       "Bash(kubectl get:*)",
       "Bash(kubectl describe:*)",
-      "Bash(kubectl exec:*)"
+      "Bash(kubectl exec:*)",
+      "mcp__WebSearch__bailian_web_search",
+      "Bash(claude config:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
