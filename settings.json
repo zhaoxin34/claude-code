@@ -28,7 +28,9 @@
       "mcp__mcp-server-starrocks__*"
     ],
     "deny": [
-      "Bash(rm -rf *)"
+      "Bash(rm -rf *)",
+      "WebSearch",
+      "WebFetch"
     ]
   },
   "model": "opus",
