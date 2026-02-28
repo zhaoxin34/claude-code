@@ -25,6 +25,7 @@ memory: project
 ## 输出格式
 
 修改记录应包含：
+
 - 变更日期（如果适用）
 - 变更类型
 - 变更描述
@@ -42,6 +43,6 @@ memory: project
 
 ## 输出文件的位置和文件名
 
-{当前工程目录}/docs/history/{yyyy-MM-dd_HH:mm}_{history_name}.md
+{当前工程目录}/docs/history/{yyyy-MM-dd-HH-mm}-{history_name}.md
 
 history_name：一般是feature或fix的缩写，如果这次修改包含了多个feature和bug-fix等修改，那么找一个最重要写就好

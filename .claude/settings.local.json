@@ -4,7 +4,9 @@
       "WebSearch",
       "Skill(wezterm-cli)",
       "mcp__mcp-ali-web-search__bailian_web_search",
-      "Skill(awesome-agent)"
+      "Skill(awesome-agent)",
+      "mcp__WebSearch__bailian_web_search",
+      "Bash(claude config:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
