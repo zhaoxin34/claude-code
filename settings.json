@@ -31,7 +31,7 @@
       "Bash(rm -rf *)"
     ]
   },
-  "model": "haiku",
+  "model": "opus",
   "hooks": {
     "UserPromptSubmit": [
       {
