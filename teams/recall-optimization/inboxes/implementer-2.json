@@ -1,0 +1,8 @@
+[
+  {
+    "from": "team-lead",
+    "text": "继续完成 ChromaDB 余弦相似度改造和 Rerank Provider 的实现。\n\n项目路径: /Volumes/data/working/life/memory\n\n请先读取以下文件了解现有实现：\n1. src/memory/storage/chroma.py\n2. src/memory/providers/base.py\n3. src/memory/pipelines/query.py\n4. src/memory/config/schema.py\n\n然后实施：\n1. 修改 chroma.py 使用余弦相似度\n2. 创建 rerank.py provider\n3. 修改 QueryPipeline 支持 Rerank",
+    "timestamp": "2026-03-01T14:19:37.050Z",
+    "read": true
+  }
+]
