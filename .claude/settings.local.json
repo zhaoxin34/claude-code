@@ -10,7 +10,16 @@
       "Bash(kubectl describe:*)",
       "Bash(kubectl exec:*)",
       "mcp__WebSearch__bailian_web_search",
-      "Bash(claude config:*)"
+      "Bash(claude config:*)",
+      "Bash(memory ingest:*)",
+      "Bash(memory doc:*)",
+      "Bash(memory search:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(chmod +x:*)",
+      "Bash(./skills/my-memory/my-memory.sh list:*)",
+      "Bash(./skills/my-memory/my-memory.sh search:*)",
+      "Bash(/Users/zhaoxin/.claude/skills/my-memory/my-memory.sh search:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
