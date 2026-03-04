@@ -19,7 +19,16 @@
       "Bash(chmod +x:*)",
       "Bash(./skills/my-memory/my-memory.sh list:*)",
       "Bash(./skills/my-memory/my-memory.sh search:*)",
-      "Bash(/Users/zhaoxin/.claude/skills/my-memory/my-memory.sh search:*)"
+      "Bash(/Users/zhaoxin/.claude/skills/my-memory/my-memory.sh search:*)",
+      "Bash(/Volumes/data/working/ai/claude-code/skills/secretary/secretary.sh help:*)",
+      "Bash(/Volumes/data/working/ai/claude-code/skills/secretary/secretary.sh add:*)",
+      "Bash(python3:*)",
+      "Bash(/Volumes/data/working/ai/claude-code/skills/secretary/secretary.sh query:*)",
+      "Bash(/Volumes/data/working/ai/claude-code/skills/secretary/secretary.sh:*)",
+      "Bash(my-secretary contact:*)",
+      "Bash(rm apple-calendar:*)",
+      "Bash(ln:*)",
+      "Bash(my-secretary event:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

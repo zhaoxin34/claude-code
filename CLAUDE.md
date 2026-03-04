@@ -10,6 +10,7 @@
 * 如果需要在markdown里绘图，优先使用mermaid
 * 如果需要执行rm -rf 这样的命令，由于这个命令是不允许执行的，所以替代方案是执行mv，将这些文件mv到/tmp/claude目录，比如 rm -rf a.txt, 可以改成执行 mv a.txt /tmp/claude/.delete.a.txt
 * 如果是git工程，必须使用hooks，可以用`git config core.hooksPath hooks` 设置hook
+* 如果没有.gitignore不允许提交代码
 
 # 工程规范
 
