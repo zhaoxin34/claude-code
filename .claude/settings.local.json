@@ -28,7 +28,10 @@
       "Bash(my-secretary contact:*)",
       "Bash(rm apple-calendar:*)",
       "Bash(ln:*)",
-      "Bash(my-secretary event:*)"
+      "Bash(my-secretary event:*)",
+      "Skill(my-secretary)",
+      "Bash(sqlite3:*)",
+      "Bash(kubectl delete:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

@@ -96,7 +96,9 @@
     "commit-commands@claude-plugins-official": true,
     "claude-reflect@claude-reflect-marketplace": false,
     "ast-grep@ast-grep-marketplace": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true
   },
   "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true
