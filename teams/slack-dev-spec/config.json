@@ -1,0 +1,19 @@
+{
+  "name": "slack-dev-spec",
+  "description": "Slack聊天系统开发规范实施",
+  "createdAt": 1772981407516,
+  "leadAgentId": "team-lead@slack-dev-spec",
+  "leadSessionId": "b504744d-b928-4ca4-8e3e-dd06c9390802",
+  "members": [
+    {
+      "agentId": "team-lead@slack-dev-spec",
+      "name": "team-lead",
+      "agentType": "general-purpose",
+      "model": "MiniMax-M2.5",
+      "joinedAt": 1772981407516,
+      "tmuxPaneId": "",
+      "cwd": "/Volumes/data/working/ai/anteam",
+      "subscriptions": []
+    }
+  ]
+}
