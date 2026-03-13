@@ -1,0 +1,23 @@
+{
+  "skill_name": "python-best-practice",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我创建一个新的 Python 项目，项目名叫 my-web-server，需要用到 sqlite 数据库",
+      "expected_output": "创建完整的项目结构，包含 src/my_web_server/, tests/, pyproject.toml, Makefile, .gitignore，使用 uv 管理依赖",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "初始化一个 Python 项目，名字叫 data-processor，用于数据处理",
+      "expected_output": "创建完整的项目结构，包含 src/data_processor/, tests/, pyproject.toml, Makefile",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "创建一个 Python CLI 项目，名字叫 file-utils",
+      "expected_output": "创建完整的项目结构，使用 uv，包含类型检查、格式化、测试命令",
+      "files": []
+    }
+  ]
+}

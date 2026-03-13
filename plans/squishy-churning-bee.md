@@ -338,3 +338,211 @@ class User(SQLModel, table=True):
 4. 测试认证: `GET /api/auth/me` (带 JWT token)
 5. 运行测试: `make test`
 6. 运行代码检查: `make ci`
+
+---
+
+# Omega 管理后台实现计划
+
+## 背景
+
+为 Slack 聊天系统实现管理后台（代号：**Omega**），用于维护用户、频道等资源。
+
+## 需求确认
+
+- **实现方式**: 同项目 `/admin` 路由（frontend/src/pages/admin/）
+- **用户管理**: 完整 CRUD（查看、创建、编辑、删除）
+- **访问权限**: 超级用户专属（需要 is_superuser=True）
+
+## 实现方案
+
+### 1. Backend - 扩展用户管理 API
+
+**新增文件:**
+- `backend/src/api/admin.py` - Admin API 路由
+- `backend/src/schemas/user_admin.py` - Admin 用的 User schemas
+
+**需要实现的端点:**
+| 方法 | 路径 | 说明 |
+|------|------|------|
+| GET | /api/admin/users | 获取用户列表 |
+| GET | /api/admin/users/{id} | 获取单个用户 |
+| POST | /api/admin/users | 创建用户 |
+| PUT | /api/admin/users/{id} | 更新用户 |
+| DELETE | /api/admin/users/{id} | 删除用户 |
+
+**修改文件:**
+- `backend/src/main.py` - 注册 admin router
+
+### 2. Backend - 添加超级用户权限验证
+
+**修改文件:**
+- `backend/src/api/deps.py` - 添加 `get_current_superuser` 依赖
+
+### 3. Frontend - Omega 管理页面
+
+**新增文件:**
+- `frontend/src/pages/admin/AdminPage.tsx` - 管理后台主页
+- `frontend/src/pages/admin/UserManagePage.tsx` - 用户管理页面
+- `frontend/src/pages/admin/UserFormModal.tsx` - 用户编辑弹窗
+- `frontend/src/api/admin.ts` - Admin API 调用
+- `frontend/src/stores/adminSlice.ts` - Redux slice for admin
+
+**修改文件:**
+- `frontend/src/App.tsx` - 添加 /admin 路由
+- `frontend/src/stores/index.ts` - 注册 admin slice
+
+### 4. 验证方案
+
+1. 启动服务: `make dev-backend dev-frontend`
+2. 访问 `http://localhost:3000/admin`
+3. 测试非超级用户访问应被拒绝
+4. 创建超级用户测试完整 CRUD
+5. 运行 `make ci` 确保代码质量
+
+## 关键文件路径
+
+- `backend/src/api/admin.py`
+- `backend/src/schemas/user_admin.py`
+- `backend/src/api/deps.py`
+- `backend/src/main.py`
+- `frontend/src/pages/admin/`
+- `frontend/src/api/admin.ts`
+- `frontend/src/stores/adminSlice.ts`
+
+---
+
+# 工作空间 (Workspace) 实现计划
+
+## 背景
+
+根据 `docs/Slack 风格聊天系统 - 简化版技术方案.md`，MVP 第二步是实现工作空间功能。
+
+## 需求分析
+
+### 需要实现的功能
+| 功能 | 描述 |
+|------|------|
+| 创建工作空间 | 用户可以创建新的工作空间 |
+| 列出工作空间 | 用户可以查看自己加入的工作空间列表 |
+| 加入工作空间 | 用户可以加入已有工作空间 |
+| 工作空间成员 | 工作空间与用户的多对多关系 |
+
+### 数据模型
+```
+workspaces - 工作空间
+workspace_members - 工作空间成员 (关联表)
+```
+
+## 实现方案
+
+### 1. Backend - 数据模型
+
+**新建文件:** `backend/src/models/workspace.py`
+
+```python
+class Workspace(SQLModel, table=True):
+    """Workspace model."""
+    __tablename__ = "workspaces"
+
+    id: int | None = Field(default=None, primary_key=True)
+    name: str = Field(index=True)
+    description: str | None = None
+    owner_id: int = Field(foreign_key="users.id")
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+class WorkspaceMember(SQLModel, table=True):
+    """Workspace member model."""
+    __tablename__ = "workspace_members"
+
+    id: int | None = Field(default=None, primary_key=True)
+    workspace_id: int = Field(foreign_key="workspaces.id")
+    user_id: int = Field(foreign_key="users.id")
+    role: str = Field(default="member")  # owner, admin, member
+    joined_at: datetime = Field(default_factory=datetime.utcnow)
+```
+
+### 2. Backend - Schemas
+
+**新建文件:** `backend/src/schemas/workspace.py`
+
+- `WorkspaceCreate` - 创建请求
+- `WorkspaceUpdate` - 更新请求
+- `WorkspaceResponse` - 工作空间响应
+- `WorkspaceMemberResponse` - 成员响应
+- `WorkspaceListResponse` - 列表响应
+
+### 3. Backend - Repository
+
+**新建文件:** `backend/src/repository/workspace_repository.py`
+
+- `get_workspace` - 获取单个工作空间
+- `get_user_workspaces` - 获取用户所有工作空间
+- `create_workspace` - 创建工作空间
+- `add_member` - 添加成员
+- `remove_member` - 移除成员
+- `is_member` - 检查是否成员
+
+### 4. Backend - API
+
+**新建文件:** `backend/src/api/workspace.py`
+
+| 方法 | 路径 | 描述 |
+|------|------|------|
+| GET | /api/workspaces | 列出用户的工作空间 |
+| POST | /api/workspaces | 创建工作空间 |
+| GET | /api/workspaces/{id} | 获取工作空间详情 |
+| PUT | /api/workspaces/{id} | 更新工作空间 |
+| DELETE | /api/workspaces/{id} | 删除工作空间 |
+| POST | /api/workspaces/{id}/join | 加入工作空间 |
+| DELETE | /api/workspaces/{id}/members/{user_id} | 移除成员 |
+
+**修改文件:** `backend/src/main.py` - 注册 workspace router
+
+### 5. Frontend - API Client
+
+**新建文件:** `frontend/src/api/workspace.ts`
+
+- `getWorkspaces()` - 获取工作空间列表
+- `createWorkspace(data)` - 创建工作空间
+- `joinWorkspace(id)` - 加入工作空间
+
+### 6. Frontend - Types
+
+**新建文件:** `frontend/src/types/workspace.ts`
+
+### 7. Frontend - Page
+
+**新建文件:** `frontend/src/pages/workspace/WorkspacePage.tsx`
+
+- 工作空间列表展示
+- 创建工作空间按钮
+- 加入工作空间功能
+
+### 8. Frontend - Routing
+
+**修改文件:** `frontend/src/App.tsx`
+
+- 添加 `/workspaces` 路由
+- 在首页添加"工作空间"链接
+
+## 关键文件路径
+
+- `backend/src/models/workspace.py`
+- `backend/src/schemas/workspace.py`
+- `backend/src/repository/workspace_repository.py`
+- `backend/src/api/workspace.py`
+- `backend/src/main.py`
+- `frontend/src/api/workspace.ts`
+- `frontend/src/types/workspace.ts`
+- `frontend/src/pages/workspace/WorkspacePage.tsx`
+- `frontend/src/App.tsx`
+
+## 验证方案
+
+1. 启动服务: `make dev-backend dev-frontend`
+2. 测试 API:
+   - POST /api/workspaces (创建)
+   - GET /api/workspaces (列表)
+   - POST /api/workspaces/{id}/join (加入)
+3. 测试前端: 访问 http://localhost:3000/workspaces
+4. 运行 `make ci` 确保代码质量
