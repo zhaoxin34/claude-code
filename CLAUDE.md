@@ -12,6 +12,10 @@
 * 如果是git工程，必须使用hooks，可以用`git config core.hooksPath hooks` 设置hook
 * 如果没有.gitignore不允许提交代码
 
+# 个性化配置
+
+* maven仓库的位置 /Volumes/data/working/sdk/repo
+
 # 工程规范
 
 ## python代码

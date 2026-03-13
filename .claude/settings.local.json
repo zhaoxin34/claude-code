@@ -31,7 +31,9 @@
       "Bash(my-secretary event:*)",
       "Skill(my-secretary)",
       "Bash(sqlite3:*)",
-      "Bash(kubectl delete:*)"
+      "Bash(kubectl delete:*)",
+      "Bash(claude mcp:*)",
+      "mcp__chrome-devtools__*"
     ]
   },
   "enableAllProjectMcpServers": true,
