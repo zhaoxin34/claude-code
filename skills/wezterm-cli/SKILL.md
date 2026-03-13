@@ -97,7 +97,7 @@ Options:
 ## 打开新终端
 
 ```bash
-pane_id=$(wezterm cli spawn -- zsh)
+pane_id=$(wezterm cli spawn --cwd "$PWD" -- zsh)
 ```
 
 ## 向pane发送命令
@@ -126,7 +126,7 @@ wezterm cli get-text --pane-id=$pane_id --start-line=-200
 
 ```bash
 # 开启一个新的终端pane并获得pane id
-pane_id=$(wezterm cli spawn -- zsh)
+pane_id=$(wezterm cli spawn --cwd "$PWD" -- zsh)
 
 # 向pane发送命令, 让pane进入k8s的pod
 echo -n "kubectl exec -it -n dev-wolf wolf-manager-admin-0 -- bash\n" | wezterm cli send-text --pane-id=$pane_id --no-paste

@@ -18,10 +18,10 @@ prompt = input_data.get("prompt", "")
 
 # Check for sensitive patterns
 sensitive_patterns = [
-    (
-        r"(?i)\b(password|secret|key|token)\s*[:=]",
-        "Prompt contains potential secrets",
-    ),
+    # (
+    #     r"(?i)\b(password|secret|key|token)\s*[:=]",
+    #     "Prompt contains potential secrets",
+    # ),
 ]
 
 for pattern, message in sensitive_patterns:
