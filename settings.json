@@ -25,7 +25,8 @@
       "Bash(python3 *)",
       "Bash(openspec *)",
       "Bash(make *)",
-      "mcp__mcp-server-starrocks__*"
+      "mcp__mcp-server-starrocks__*",
+      "mcp__pencil"
     ],
     "deny": [
       "Bash(rm -rf *)",
