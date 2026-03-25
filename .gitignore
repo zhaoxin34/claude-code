@@ -104,3 +104,4 @@ cache/
 stats-cache.json
 tasks/
 backups/
+.playwright
