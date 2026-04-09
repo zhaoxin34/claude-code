@@ -1,0 +1,19 @@
+{
+  "name": "jdk17-upgrade",
+  "description": "JDK17 upgrade investigation - two parallel paths",
+  "createdAt": 1774493558541,
+  "leadAgentId": "team-lead@jdk17-upgrade",
+  "leadSessionId": "bd16bb4e-986a-4d25-b446-c14d1e3af97f",
+  "members": [
+    {
+      "agentId": "team-lead@jdk17-upgrade",
+      "name": "team-lead",
+      "agentType": "team-lead",
+      "model": "MiniMax-M2.7",
+      "joinedAt": 1774493558541,
+      "tmuxPaneId": "",
+      "cwd": "/Volumes/data/working/datatist/event-producer",
+      "subscriptions": []
+    }
+  ]
+}
