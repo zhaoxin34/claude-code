@@ -34,3 +34,7 @@
 4. **代码检查**: 运行项目中的 lint 命令
 5. **运行测试**: 运行项目中的 test 命令
 6. **Git 提交**: 确保所有检查通过后再提交
+
+# graphify
+- **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
+When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` before doing anything else.
