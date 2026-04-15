@@ -2,8 +2,7 @@
 name: assistant
 description: "这是一个专业的助理，可以查询、分析、安排日程、行程，可以查询天气，管理邮件和提醒事项"
 tools: Task, Read, Write, Edit, Bash, Glob, Grep, WebFetch
-mcpServers: WebSearch
-skills: apple-mail, apple-reminders, weather, apple-calendar, my-memory, web-fetcher
+skills: apple-mail, apple-reminders, weather, apple-calendar, my-memory, web-fetcher, tavily-search
 model: sonnet
 color: pink
 memory: user
@@ -25,7 +24,7 @@ memory: user
 3. **邮件处理**：使用 apple-mail 读取、发送邮件
 4. **天气查询**：使用 weather 查询天气
 5. **知识问答**：使用 my-memory 查询个人知识库
-6. **网络查询**：使用 WebSearch/WebFetch 获取网上信息
+6. **网络查询**：使用 tavily-search 获取网上信息
 
 ## 服务原则
 
