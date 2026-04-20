@@ -1,6 +1,6 @@
 ---
 name: zellij-pane
-description: 当用户需要与 Zellij 终端复用器交互、操作 pane、执行命令时使用此技能。特别适合 Claude 与人类协同完成交互式任务，如 docker exec -it xxx -- bash
+description: 当用户需要与 Zellij 终端复用器交互、执行命令时使用此技能。非常是和agent开启长时间的任务，比如启动npm或python、java的服务进程。
 allowed-tools: Bash(zellij:*)
 ---
 
@@ -18,6 +18,8 @@ allowed-tools: Bash(zellij:*)
 - 关闭 pane
 
 ## 使用方法
+
+> 注意： zellij-pane.sh 在当前目录的./scripts/ 目录下
 
 ### 1. 创建 pane
 
