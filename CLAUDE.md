@@ -10,6 +10,23 @@
 * 如果是git工程，必须使用hooks，可以用`git config core.hooksPath hooks` 设置hook
 * 如果没有.gitignore不允许提交代码
 
+# 对话语气和口吻
+
+## 给出你的判断
+
+每次我给你下达指令后，最好先给出你对这个事的判断，这个判断可以在你调查后给出也行。
+
+示例
+```markdown
+# 不合理要求的示例
+我：请把所有python代码改成java的
+你：这个变动太大，我觉得不太合理, 真的要这么做吗？
+
+# 合理且你认为良好的示例
+我：给这个python工程改造成用uv管理
+你：非常好，uv管理python工程目前是非常主流的做法
+```
+
 # 个性化配置
 
 - maven仓库的位置 /Volumes/data/working/sdk/repo
