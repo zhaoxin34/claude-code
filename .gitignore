@@ -105,3 +105,4 @@ stats-cache.json
 tasks/
 backups/
 .playwright
+plans/
