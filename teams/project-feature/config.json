@@ -1,0 +1,19 @@
+{
+  "name": "project-feature",
+  "description": "Implement Project feature for CDP platform - multi-tenant architecture for AI research",
+  "createdAt": 1776956466113,
+  "leadAgentId": "team-lead@project-feature",
+  "leadSessionId": "2c37c36e-6fae-4d1e-aeca-2f0b063ff8ea",
+  "members": [
+    {
+      "agentId": "team-lead@project-feature",
+      "name": "team-lead",
+      "agentType": "team-lead",
+      "model": "MiniMax-M2.7",
+      "joinedAt": 1776956466113,
+      "tmuxPaneId": "",
+      "cwd": "/Volumes/data/working/ai/matrix/products",
+      "subscriptions": []
+    }
+  ]
+}

@@ -1,7 +1,14 @@
 {
   "env": {
     "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_SMALL_FAST_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.7"
   },
   "permissions": {
     "allow": [
@@ -103,7 +110,8 @@
     "jdtls-lsp@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true
   },
   "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true
