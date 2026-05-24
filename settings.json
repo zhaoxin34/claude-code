@@ -114,5 +114,6 @@
     "ralph-loop@claude-plugins-official": true
   },
   "autoMemoryEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "teammateMode": "auto"
 }
