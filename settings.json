@@ -1,15 +1,95 @@
 {
+  "autoMemoryEnabled": true,
+  "enabledPlugins": {
+    "ast-grep@ast-grep-marketplace": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-reflect@claude-reflect-marketplace": false,
+    "code-simplifier@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "document-skills@anthropic-agent-skills": false,
+    "example-skills@anthropic-agent-skills": false,
+    "frontend-design@claude-plugins-official": true,
+    "hookify@claude-plugins-official": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
   "env": {
-    "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.7",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.7",
     "ANTHROPIC_MODEL": "MiniMax-M2.7",
     "ANTHROPIC_SMALL_FAST_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.7",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.7"
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "uv run $HOME/.claude/hooks/notification.py",
+            "type": "command"
+          },
+          {
+            "command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\"'",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash '/Users/zhaoxin/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "uv run $HOME/.claude/hooks/stop.py",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "command": "uv run $HOME/.claude/hooks/subagent_stop.py",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "uv run $HOME/.claude/hooks/user_prompt_submit.py",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "opus[1m]",
   "permissions": {
     "allow": [
       "Bash(mkdir *)",
@@ -41,79 +121,11 @@
       "WebFetch"
     ]
   },
-  "model": "opus[1m]",
-  "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "uv run $HOME/.claude/hooks/user_prompt_submit.py"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "uv run $HOME/.claude/hooks/notification.py"
-          },
-          {
-            "type": "command",
-            "command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\"'"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "uv run $HOME/.claude/hooks/stop.py"
-          }
-        ]
-      }
-    ],
-    "SubagentStop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "uv run $HOME/.claude/hooks/subagent_stop.py"
-          }
-        ]
-      }
-    ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "ccline",
-    "padding": 0
-  },
-  "enabledPlugins": {
-    "document-skills@anthropic-agent-skills": false,
-    "example-skills@anthropic-agent-skills": false,
-    "pyright-lsp@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true,
-    "claude-reflect@claude-reflect-marketplace": false,
-    "ast-grep@ast-grep-marketplace": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "hookify@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
-    "jdtls-lsp@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "ralph-loop@claude-plugins-official": true
-  },
-  "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "command": "ccline",
+    "padding": 0,
+    "type": "command"
+  },
   "teammateMode": "auto"
 }
